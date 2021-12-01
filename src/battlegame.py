@@ -1,5 +1,5 @@
 wizard = "Wizard"
-wizard_hp = 70 
+wizard_hp = 70
 wizard_damage = 150
 
 elf = "Elf"
@@ -26,14 +26,14 @@ while True:
     print("5. Exit the game")
     option = input("Choose your character:").lower()
     if option == "1" or option == "wizard":
-        character = wizard 
+        character = wizard
         my_hp = wizard_hp
         my_damage = wizard_damage
         print("You have chosen Wizard!")
         print("Health: 70", "Damage: 150")
         break
-    if option == "2" or option =="elf":
-        character = elf 
+    if option == "2" or option == "elf":
+        character = elf
         my_hp = elf_hp
         my_damage = elf_damage
         print("You have chosen elf!")
@@ -55,7 +55,8 @@ while True:
         break
     if option == "5" or option == "exit":
         quit()
-    else: print("Unknown character")
+    else:
+        print("Unknown character")
 while True:
 
     dragon_hp = dragon_hp - my_damage
@@ -66,10 +67,11 @@ while True:
         print("The Dragon has been felled!")
         break
     my_hp = my_hp - dragon_damage
-    print("The", str(character), "took", str(dragon_damage), "damage from the Dragon!")
+    print("The", str(character), "took", str(
+        dragon_damage), "damage from the Dragon!")
     if my_hp >= 0:
-        print("The", str(character) + "'s", "hitpoints are now:", str(my_hp) + "!")
+        print("The", str(character) + "'s",
+              "hitpoints are now:", str(my_hp) + "!")
     if my_hp <= 0:
         print("You have fallen in battle :(")
         break
-
